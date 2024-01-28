@@ -2,6 +2,9 @@ import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+
+import '../../../../home/persentation/home.dart';
 
 class SplashViewbody extends StatefulWidget {
   const SplashViewbody({Key? key}) : super(key: key);
@@ -24,6 +27,15 @@ class _SplashViewbodyState extends State<SplashViewbody>
     _animationController.forward();
 
     super.initState();
+    goToHomePage();
+  }
+
+  void goToHomePage() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const Homepage(),
+          transition: Transition.cupertino,
+          duration: const Duration(microseconds: 250));
+    });
   }
 
   @override
