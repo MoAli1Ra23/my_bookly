@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/persentation/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
@@ -5,6 +6,8 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+     body: HomeViewBody(),
+    );
   }
 }
