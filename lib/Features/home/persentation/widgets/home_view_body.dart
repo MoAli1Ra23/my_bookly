@@ -12,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Padding(
-        padding: EdgeInsets.only(left: 16.0),
+        padding: EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -54,6 +54,21 @@ class BestSallerListVeiwItem extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            width: 30,
+          ),
+          Column(
+            children: [
+              SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: const Text(
+                    'Herry Potter and the Goblet fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style:Styles.textStyle20,
+                  ))
+            ],
+          )
         ],
       ),
     );
