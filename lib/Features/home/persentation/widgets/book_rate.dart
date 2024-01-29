@@ -1,31 +1,41 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 
 import '../../../../core/utils/styles.dart';
+
 class BookRate extends StatelessWidget {
-  const BookRate({super.key});
+  const BookRate({
+    Key? key,
+    this.mainAxisAlignment = MainAxisAlignment.spaceEvenly,
+  }) : super(key: key);
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
-    return   Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Row(
+      mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        const Icon(
+      children: const [
+        Icon(
           FontAwesomeIcons.solidStar,
+          size:14,
           color: Color(0xffffdd4d),
         ),
-        const SizedBox(
+        SizedBox(
           width: 6.3,
         ),
-        const Text(
+        Text(
           '4.8',
           style: Styles.textStyle16,
         ),
-        const SizedBox(width: 5),
-        Text(
-          '234',
-          style: Styles.textStyle14.copyWith(color: const Color(0xff707070)),
+        SizedBox(width: 5),
+        Opacity(
+          opacity: .5,
+          child: Text(
+            '(2347)',
+            style: Styles.textStyle14,
+          ),
         ),
       ],
     );

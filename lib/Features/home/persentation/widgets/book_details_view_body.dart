@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/utils/styles.dart';
 import 'book_detials_custom_app_bar.dart';
+import 'book_rate.dart';
 import 'custom_book_cover.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -41,6 +42,10 @@ class BookDetailsViewBody extends StatelessWidget {
                     fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),
               ),
             ),
+            const SizedBox(
+              height: 18,
+            ),
+            const BookRate(mainAxisAlignment: MainAxisAlignment.center,),
 
           ],
         ),
