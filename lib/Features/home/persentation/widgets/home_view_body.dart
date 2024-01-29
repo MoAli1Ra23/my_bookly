@@ -1,6 +1,6 @@
+import 'package:bookly/Features/home/persentation/widgets/best_saller_list_item.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/assets.dart';
 import '../../../../core/utils/styles.dart';
 import 'custom_appbar.dart';
 import 'featured_list_view.dart';
@@ -23,53 +23,12 @@ class HomeViewBody extends StatelessWidget {
             ),
             Text(
               "Best Seller",
-              style: Styles.textStyle18,
+              style: Styles.textStyle20,
             ),
+            
             BestSallerListVeiwItem(),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class BestSallerListVeiwItem extends StatelessWidget {
-  const BestSallerListVeiwItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: Row(
-        children: [
-          AspectRatio(
-            aspectRatio: 2.7 / 4,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: const DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage(AssetsData.test),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(
-            width: 30,
-          ),
-          Column(
-            children: [
-              SizedBox(
-                  width: MediaQuery.of(context).size.width * .5,
-                  child: const Text(
-                    'Herry Potter and the Goblet fire',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style:Styles.textStyle20,
-                  ))
-            ],
-          )
-        ],
       ),
     );
   }
