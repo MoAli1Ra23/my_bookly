@@ -1,9 +1,10 @@
+import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:get/get.dart';
-
+import 'package:go_router/go_router.dart';
+ 
 import '../../../../home/persentation/views/home.dart';
 
 class SplashViewbody extends StatefulWidget {
@@ -32,9 +33,10 @@ class _SplashViewbodyState extends State<SplashViewbody>
 
   void goToHomePage() {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => const Homepage(),
-          transition: Transition.cupertino,
-          duration: const Duration(microseconds: 250));
+      // Get.to(() => const Homepage(),
+      //     transition: Transition.cupertino,
+      //     duration: const Duration(microseconds: 250));
+       GoRouter.of(context).push(AppRouter.kHome);
     });
   }
 

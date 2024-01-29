@@ -13,7 +13,8 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_icon_class: ^0.0.6
-  get: ^4.6.5
+
+  go_router: ^13.1.0
   google_fonts: ^6.1.0
 
 dev_dependencies:
@@ -28,8 +29,7 @@ flutter:
     - assets/images/
     - assets/images/test1.jpg
     - assets/images/Logo.png
-  fonts:  
+  fonts:
     - family: GT Sectra Fine
       fonts:
         - asset: assets/fonts/GT Sectra Fine Regular.ttf
-
