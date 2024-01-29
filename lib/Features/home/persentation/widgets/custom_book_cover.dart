@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/assets.dart';
@@ -9,12 +8,11 @@ class CustomBookCover extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20,left: 20,top: 15,bottom: 10),
-      child: AspectRatio( 
-        aspectRatio: 2.7/4,
+      padding: const EdgeInsets.only(right: 8, left: 05, top: 10, bottom: 10),
+      child: AspectRatio(
+        aspectRatio: 2.6 / 4,
         child: Container(
-    
-          decoration:   BoxDecoration(
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             image: const DecorationImage(
               fit: BoxFit.fill,
