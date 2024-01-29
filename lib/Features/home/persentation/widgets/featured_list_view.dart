@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_list_view_item.dart';
+import 'custom_book_cover.dart';
 
 class FeatureListView extends StatelessWidget {
   const FeatureListView({super.key});
@@ -12,7 +12,7 @@ class FeatureListView extends StatelessWidget {
       height: MediaQuery.of(context).size.height *.3,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemBuilder: ((context, index) => const FeaturedListViewItem()),
+        itemBuilder: ((context, index) => const CustomBookCover()),
       ),
     );
   }
