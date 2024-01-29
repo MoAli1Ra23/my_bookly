@@ -1,5 +1,6 @@
 import 'package:bookly/Features/home/persentation/widgets/best_saller_list_item.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 
 import '../../../../core/utils/styles.dart';
 import 'custom_appbar.dart';
@@ -25,7 +26,6 @@ class HomeViewBody extends StatelessWidget {
               "Best Seller",
               style: Styles.textStyle20,
             ),
-            
             BestSallerListVeiwItem(),
           ],
         ),
@@ -33,3 +33,4 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
+

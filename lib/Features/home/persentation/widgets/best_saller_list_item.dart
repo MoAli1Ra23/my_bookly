@@ -1,4 +1,4 @@
-
+import 'package:bookly/Features/home/persentation/widgets/book_rate.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -27,36 +27,40 @@ class BestSallerListVeiwItem extends StatelessWidget {
           const SizedBox(
             width: 30,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .5,
-                child: const Text(
-                  'Herry Potter and the Goblet fire',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.textStyle20,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: const Text(
+                    'Herry Potter and the Goblet fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.textStyle20,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              const Text(
-                'J.K Rowling',
-                style: Styles.textStyle14,
-              ),
-               const SizedBox(
-                height: 3,
-              ),
-              Row(
-                children: [
-                  Text('19.9 E',
-                      style: Styles.textStyle20
-                          .copyWith(fontWeight: FontWeight.bold))
-                ],
-              )
-            ],
+                const SizedBox(
+                  height: 3,
+                ),
+                const Text(
+                  'J.K Rowling',
+                  style: Styles.textStyle14,
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                Row(
+                  children: [
+                    Text('19.9 E',
+                        style: Styles.textStyle20
+                            .copyWith(fontWeight: FontWeight.bold)),
+                    const Spacer(),
+                    const BookRate(),
+                  ],
+                )
+              ],
+            ),
           )
         ],
       ),
