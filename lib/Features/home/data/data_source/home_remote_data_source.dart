@@ -28,8 +28,12 @@ class HomeRepoImpl extends HomeRemotDateSource {
     return books;
   }
 
+  ///volumes?Filtering=free-ebooks&Sorting=newest&q=programming
   @override
-  Future<List<BookEntity>> fetchNewestbooks() {
-    throw UnimplementedError();
+  Future<List<BookEntity>> fetchNewestbooks() async {
+    var respons = await apiService.get(
+        endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=programming');
+    List<BookEntity> books = formlistMapstoListBooks(respons);
+    return books;
   }
 }
