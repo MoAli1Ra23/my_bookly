@@ -1,11 +1,13 @@
 import 'dart:convert';
 
+import 'package:bookly/Features/home/domain/entities/book_entity.dart';
+
 import 'access_info.dart';
 import 'sale_info.dart';
 import 'search_info.dart';
 import 'volume_info.dart';
 
-class BookMoodel {
+class BookMoodel extends BookEntity {
   String? kind;
   String? id;
   String? etag;
@@ -24,7 +26,13 @@ class BookMoodel {
     this.saleInfo,
     this.accessInfo,
     this.searchInfo,
-  });
+  }) : super(
+            bookId: id,
+            image: volumeInfo?.imageLinks?.thumbnail??"no name",
+            title: volumeInfo!.title!,
+            autherName: volumeInfo.authors!.first,
+            price: 0.0,
+            rateing: 4.4);
 
   factory BookMoodel.fromMap(Map<String, dynamic> data) => BookMoodel(
         kind: data['kind'] as String?,

@@ -4,14 +4,14 @@ import 'list_price.dart';
 import 'retail_price.dart';
 
 class Offer {
-  int? finskyOfferType;
+  num? finskyOfferType;
   ListPrice? listPrice;
   RetailPrice? retailPrice;
 
   Offer({this.finskyOfferType, this.listPrice, this.retailPrice});
 
   factory Offer.fromMap(Map<String, dynamic> data) => Offer(
-        finskyOfferType: data['finskyOfferType'] as int?,
+        finskyOfferType: data['finskyOfferType'] as num?,
         listPrice: data['listPrice'] == null
             ? null
             : ListPrice.fromMap(data['listPrice'] as Map<String, dynamic>),
