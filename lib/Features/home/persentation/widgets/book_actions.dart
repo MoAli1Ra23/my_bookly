@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_button.dart';
@@ -17,7 +16,8 @@ class BookAction extends StatelessWidget {
               backgroundColor: Colors.white,
               textColor: Colors.black,
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(16), bottomLeft: Radius.circular(16)),
+                  topLeft: Radius.circular(16),
+                  bottomLeft: Radius.circular(16)),
               text: "19.9 E",
             ),
           ),
@@ -26,7 +26,8 @@ class BookAction extends StatelessWidget {
             backgroundColor: Color(0xffef8262),
             textColor: Colors.white,
             borderRadius: BorderRadius.only(
-                topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+                topRight: Radius.circular(16),
+                bottomRight: Radius.circular(16)),
             text: "Free prview",
             fontSize: 16,
           )),

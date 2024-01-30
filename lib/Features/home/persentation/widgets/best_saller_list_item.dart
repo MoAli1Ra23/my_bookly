@@ -11,7 +11,7 @@ class BestSallerListVeiwItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>GoRouter.of(context).push(AppRouter.kDetalis),
+      onTap: () => GoRouter.of(context).push(AppRouter.kDetalis),
       child: SizedBox(
         height: 150,
         child: Row(

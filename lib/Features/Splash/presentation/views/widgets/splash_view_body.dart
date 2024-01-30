@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:go_router/go_router.dart';
- 
+
 import '../../../../home/persentation/views/home.dart';
 
 class SplashViewbody extends StatefulWidget {
@@ -36,7 +36,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
       // Get.to(() => const Homepage(),
       //     transition: Transition.cupertino,
       //     duration: const Duration(microseconds: 250));
-       GoRouter.of(context).push(AppRouter.kHome);
+      GoRouter.of(context).push(AppRouter.kHome);
     });
   }
 
